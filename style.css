@@ -900,9 +900,7 @@ SMALLER CARD VERSION
 }
 
 .founder-social img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
+    max-width: 42px;
 }
 
 .founder-social:hover {

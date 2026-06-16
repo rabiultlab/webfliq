@@ -56,9 +56,9 @@ function renderNavbar() {
               <span>webfliq</span>
             </a>
             <nav class="nav-links" aria-label="Main navigation">${desktopLinks}</nav>
-            <div class="nav-actions">- 
+            <div class="nav-actions">
               <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark mode">☀</button>
-              <a class="btn btn-primary" href="contact.html">Start Project <img class="btn-icon" src="assets/icons/arrow-right.svg" alt=""></a>
+              <a class="btn btn-primary" href="contact.html">Start Project <img class="btn-icon" src="assets/next-arrow-light.svg" alt=""></a>
               <button class="menu-btn" type="button" data-menu-btn aria-label="Toggle menu">☰</button>
             </div>
           </div>
@@ -85,10 +85,9 @@ function renderFooter() {
               </a>
               <p>Premium web agency specializing in modern websites, eCommerce, UI/UX, analytics, and scalable web development for startups and growing brands.</p>
               <div class="footer-socials">
-                <a class="footer-social" href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-                <a class="footer-social" href="#"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                <a class="footer-social" href="#"><img src="assets/icons/x.svg" alt="X"></a>
-                <a class="footer-social" href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
+                <a class="footer-social" href="#"><img src="assets/facebook-light.png" alt="Facebook"></a>
+                <a class="footer-social" href="#"><img src="assets/linkedin-white.png" alt="LinkedIn"></a>
+                <a class="footer-social" href="#"><img src="assets/youtube.png" alt="YouTube"></a>
               </div>
             </div>
             <div><div class="footer-title">Industries</div><div class="footer-links">${industries}</div></div>
@@ -141,13 +140,13 @@ function initTheme() {
                 savedTheme === "dark"
                     ? `
                     <img
-                      src="assets/icons/crescent-moon.svg"
+                      src="assets/moon.png"
                       alt="Light mode icon"
                     >
                     `
                     : `
                     <img
-                      src="assets/icons/sun.svg"
+                      src="assets/sun.png"
                       alt="Dark mode icon"
                     >
                     `;
@@ -175,13 +174,13 @@ function initTheme() {
                             nextTheme === "dark"
                                 ? `
                                 <img
-                                  src="assets/icons/crescent-moon.svg"
+                                  src="assets/moon.png"
                                   alt="Light mode icon"
                                 >
                                 `
                                 : `
                                 <img
-                                  src="assets/icons/sun.svg"
+                                  src="assets/sun.png"
                                   alt="Dark mode icon"
                                 >
                                 `;
