@@ -857,5 +857,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initProcessLoop();
     initFaq();
     initProjects();
-    initForms();
+    //initForms();
 });

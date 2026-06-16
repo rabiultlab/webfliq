@@ -163,44 +163,80 @@
                         </div>
                     </div>
                 </div>
-                <form class="form-panel reveal reveal-right" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
+                <form
+                    class="form-panel reveal reveal-right"
+                    name="contact"
+                    method="POST"
+                    action="/thank-you.html"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field"
+                    >
                     <input type="hidden" name="form-name" value="contact">
-                    <p class="hidden-field"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
-                    <input type="hidden" name="subject" value="New project request from webfliq website">
+
+                    <p class="hidden-field">
+                        <label>Don’t fill this out if you’re human:
+                        <input name="bot-field">
+                        </label>
+                    </p>
+
                     <div class="form-grid">
-                        <div class="field"><label for="name">Your Name</label><input id="name" name="name" type="text"
-                                placeholder="John Doe"><span class="error" data-error="name"></span></div>
-                        <div class="field"><label for="email">Your Email</label><input id="email" name="email"
-                                type="email" placeholder="john@example.com"><span class="error"
-                                data-error="email"></span></div>
-                        <div class="field"><label for="phone">Phone Number</label><input id="phone" name="phone"
-                                type="tel" inputmode="tel" placeholder="+8801712345678"><span class="error"
-                                data-error="phone"></span></div>
-                        <div class="field"><label for="budget">Project Budget</label><input id="budget" name="budget"
-                                type="text" inputmode="numeric" placeholder="500 - 1500"><span class="error"
-                                data-error="budget"></span></div>
-                        <div class="field full"><label for="service">Service Needed</label><select id="service"
-                                name="service">
-                                <option value="">Select service</option>
-                                <option>Webflow Development</option>
-                                <option>Frontend Development</option>
-                                <option>Backend Development</option>
-                                <option>WordPress Website</option>
-                                <option>Wix Website</option>
-                                <option>Shopify Store</option>
-                                <option>UI/UX Design</option>
-                                <option>Google Analytics Setup</option>
-                            </select><span class="error" data-error="service"></span></div>
-                        <div class="field full"><label for="message">Project Details</label><textarea id="message"
-                                name="message" placeholder="Tell me about your project..."></textarea><span
-                                class="error" data-error="message"></span></div>
-                        <div class="field full"><button class="btn btn-primary" type="submit">Send Message <img
-                                    class="btn-icon" src="assets/icons/arrow-right.svg" alt=""></button>
-                            <div class="success-message" data-success></div>
-                            <p>After submit, this data will appear in your Netlify site Forms dashboard.</p>
+                        <div class="field">
+                        <label for="name">Your Name</label>
+                        <input id="name" name="name" type="text" placeholder="John Doe" required>
+                        <span class="error" data-error="name"></span>
+                        </div>
+
+                        <div class="field">
+                        <label for="email">Your Email</label>
+                        <input id="email" name="email" type="email" placeholder="john@example.com" required>
+                        <span class="error" data-error="email"></span>
+                        </div>
+
+                        <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="+8801712345678">
+                        <span class="error" data-error="phone"></span>
+                        </div>
+
+                        <div class="field">
+                        <label for="budget">Project Budget</label>
+                        <input id="budget" name="budget" type="text" inputmode="numeric" placeholder="500 - 1500">
+                        <span class="error" data-error="budget"></span>
+                        </div>
+
+                        <div class="field full">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select service</option>
+                            <option>Webflow Development</option>
+                            <option>Frontend Development</option>
+                            <option>Backend Development</option>
+                            <option>WordPress Website</option>
+                            <option>Wix Website</option>
+                            <option>Shopify Store</option>
+                            <option>UI/UX Design</option>
+                            <option>Google Analytics Setup</option>
+                        </select>
+                        <span class="error" data-error="service"></span>
+                        </div>
+
+                        <div class="field full">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+                        <span class="error" data-error="message"></span>
+                        </div>
+
+                        <div class="field full">
+                        <button class="btn btn-primary" type="submit">
+                            Send Message
+                            <img class="btn-icon icon-dark" src="assets/icons/arrow-right.svg" alt="">
+                            <img class="btn-icon icon-light" src="assets/icons/arrow-right-dark.svg" alt="">
+                        </button>
+
+                        <p>After submit, this data will appear in your Netlify site Forms dashboard.</p>
                         </div>
                     </div>
-                </form>
+                    </form>
             </div>
         </section>
     </main>
