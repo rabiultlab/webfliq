@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
 <head>
@@ -125,6 +125,150 @@
                             <p>A custom analytics app with dashboard and user permissions.</p><span
                                 class="project-link">Open project <img src="assets/icons/arrow-up-right.svg"
                                     alt=""></span>
+                        </div>
+                    </a></div>
+                <div class="pagination" data-pagination><button class="pagination-btn" data-prev
+                        type="button">←</button>
+                    <div data-page-numbers></div><button class="pagination-btn" data-next type="button">→</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div data-component="footer"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | webfliq</title>
+    <meta name="description"
+        content="Explore webfliq projects across Webflow, WordPress, Shopify, Wix, UI/UX, and custom web development.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div data-component="navbar"></div>
+    <main>
+        <section class="page-hero">
+            <div class="container hero-grid">
+                <div class="reveal reveal-left active"><span class="eyebrow">Projects</span>
+                    <h1>Selected work designed to look sharp and perform better.</h1>
+                    <p class="lead">Filter projects by service type. If projects are more than eight, pagination appears
+                        automatically.</p>
+                </div>
+                <div class="hero-media reveal reveal-right active">
+                    <div class="hero-image-card"><img src="assets/images/projects-hero.jpg"
+                            alt="Portfolio project previews"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section-gradient" data-project-root data-per-page="8">
+            <div class="container">
+                <div class="project-tools reveal reveal-up"><button class="filter-btn active" data-filter="All"
+                        type="button">All</button><button class="filter-btn" data-filter="Webflow"
+                        type="button">Webflow</button><button class="filter-btn" data-filter="Shopify"
+                        type="button">Shopify</button><button class="filter-btn" data-filter="WordPress"
+                        type="button">WordPress</button><button class="filter-btn" data-filter="Custom"
+                        type="button">Custom</button><button class="filter-btn" data-filter="UI/UX"
+                        type="button">UI/UX</button><button class="filter-btn" data-filter="Wix"
+                        type="button">Wix</button></div>
+                <div class="projects-grid"><a class="project-card reveal reveal-up" href="https://example.com/project-1"
+                        target="_blank" data-category="Webflow">
+                        <div class="project-image"><img src="assets/images/project-1.jpg" alt="Nova SaaS Website"></div>
+                        <div class="project-content"><span class="tag">Webflow</span>
+                            <h3>Nova SaaS Website</h3>
+                            <p>A polished SaaS website built for demos, feature storytelling, and launch campaigns.</p>
+                            <span class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-2" target="_blank"
+                        data-category="Shopify">
+                        <div class="project-image"><img src="assets/images/project-2.jpg" alt="Luma Fashion Store">
+                        </div>
+                        <div class="project-content"><span class="tag">Shopify</span>
+                            <h3>Luma Fashion Store</h3>
+                            <p>A premium Shopify store with product storytelling and conversion tracking.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-3" target="_blank"
+                        data-category="WordPress">
+                        <div class="project-image"><img src="assets/images/project-3.jpg" alt="Atlas Business Website">
+                        </div>
+                        <div class="project-content"><span class="tag">WordPress</span>
+                            <h3>Atlas Business Website</h3>
+                            <p>A flexible CMS website with service pages and performance improvements.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-4" target="_blank"
+                        data-category="Custom">
+                        <div class="project-image"><img src="assets/images/project-4.jpg" alt="FlowBank Dashboard">
+                        </div>
+                        <div class="project-content"><span class="tag">Custom</span>
+                            <h3>FlowBank Dashboard</h3>
+                            <p>A custom dashboard with secure backend workflows and clean data views.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-5" target="_blank"
+                        data-category="UI/UX">
+                        <div class="project-image"><img src="assets/images/project-5.jpg" alt="BrightCare UI System">
+                        </div>
+                        <div class="project-content"><span class="tag">UI/UX</span>
+                            <h3>BrightCare UI System</h3>
+                            <p>A modern design system focused on clarity, trust, and simple flows.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-6" target="_blank"
+                        data-category="Wix">
+                        <div class="project-image"><img src="assets/images/project-6.jpg" alt="Urban Studio Website">
+                        </div>
+                        <div class="project-content"><span class="tag">Wix</span>
+                            <h3>Urban Studio Website</h3>
+                            <p>A fast launch Wix website with services, booking flow, and mobile design.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-7" target="_blank"
+                        data-category="Webflow">
+                        <div class="project-image"><img src="assets/images/project-7.jpg" alt="Orbit Landing Page">
+                        </div>
+                        <div class="project-content"><span class="tag">Webflow</span>
+                            <h3>Orbit Landing Page</h3>
+                            <p>A high-converting campaign page with smooth animations.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-8" target="_blank"
+                        data-category="Shopify">
+                        <div class="project-image"><img src="assets/images/project-8.jpg" alt="PureCart Store"></div>
+                        <div class="project-content"><span class="tag">Shopify</span>
+                            <h3>PureCart Store</h3>
+                            <p>A clean store experience with optimized product discovery.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
+                        </div>
+                    </a><a class="project-card reveal reveal-up" href="https://example.com/project-9" target="_blank"
+                        data-category="Custom">
+                        <div class="project-image"><img src="assets/images/project-9.jpg" alt="MetricFlow App"></div>
+                        <div class="project-content"><span class="tag">Custom</span>
+                            <h3>MetricFlow App</h3>
+                            <p>A custom analytics app with dashboard and user permissions.</p><span
+                                class="project-link">Open project <img class="theme-icon theme-icon-dark" src="assets/icons/arrow-up-right.svg" alt="">
+                                <img class="theme-icon theme-icon-light" src="assets/icons/arrow-up-right-dark.svg" alt=""></span>
                         </div>
                     </a></div>
                 <div class="pagination" data-pagination><button class="pagination-btn" data-prev
