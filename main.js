@@ -27,7 +27,7 @@ const siteData = {
             { href: "/", label: "Partners" },
             { href: "/", label: "Enterprise-Grade Security" },
             { href: "/", label: "Sustainability" },
-            { href: "/privacy", label: "Privacy Policy" }
+            { href: "/privacy", label: "Privacy Policy"}
         ]
     }
 };
@@ -52,8 +52,7 @@ function renderNavbar() {
         <div class="container">
           <div class="nav-inner">
             <a class="nav-logo" href="/" aria-label="webfliq home">
-              <span class="logo-mark"><img src="assets/icons/sparkles.svg" alt="webfliq logo icon"></span>
-              <span>webfliq</span>
+                <img src="assets/webfiq-logo2-01.png" alt="webfliq logo icon">
             </a>
             <nav class="nav-links" aria-label="Main navigation">${desktopLinks}</nav>
             <div class="nav-actions">
@@ -79,10 +78,9 @@ function renderFooter() {
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <a class="nav-logo" href="/">
-                <span class="logo-mark"><img src="assets/icons/sparkles.svg" alt="webfliq logo icon"></span>
-                <span>webfliq</span>
-              </a>
+              <a class="nav-logo" href="/" aria-label="webfliq home">
+                <img src="assets/webfiq-logo2-01.png" alt="webfliq logo icon">
+            </a>
               <p>Premium web agency specializing in modern websites, eCommerce, UI/UX, analytics, and scalable web development for startups and growing brands.</p>
               <div class="footer-socials">
                 <a class="footer-social" href="#"><img src="assets/facebook-light.png" alt="Facebook"></a>

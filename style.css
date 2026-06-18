@@ -207,13 +207,10 @@ p {
     box-shadow: var(--shadow-card)
 }
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 900;
-    letter-spacing: -.04em;
-    font-size: 20px
+.nav-logo img{
+    max-height: 40px;
+    width: auto !important;
+    
 }
 
 .logo-mark {
@@ -1360,7 +1357,10 @@ select:focus {
         --fs-h1: clamp(38px, 12vw, 58px);
         --fs-h2: clamp(30px, 9vw, 46px)
     }
-
+    .nav-logo img{
+        max-height: 30px;
+        width: auto !important;
+    }
     .navbar {
         top: 10px
     }
