@@ -44,7 +44,7 @@ function isActive(href) {
 function renderNavbar() {
     document.querySelectorAll('[data-component="navbar"]').forEach((mount) => {
         const desktopLinks = siteData.nav.map(item => `<a class="${isActive(item.href)}" href="${item.href}">${item.label}</a>`).join("");
-        const mobileLinks = [...siteData.nav, { href: "terms.html", label: "Terms & Conditions" }, { href: "privacy.html", label: "Privacy Policy" }]
+        const mobileLinks = [...siteData.nav, { href: "/terms", label: "Terms & Conditions" }, { href: "/privacy", label: "Privacy Policy" }]
             .map(item => `<a class="${isActive(item.href)}" href="${item.href}">${item.label}</a>`).join("");
 
         mount.innerHTML = `
@@ -58,7 +58,7 @@ function renderNavbar() {
             <nav class="nav-links" aria-label="Main navigation">${desktopLinks}</nav>
             <div class="nav-actions">
               <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark mode">☀</button>
-              <a class="btn btn-primary" href="contact.html">Start Project <img class="btn-icon" src="assets/next-arrow-light.svg" alt=""></a>
+              <a class="btn btn-primary" href="/contact">Start Project <img class="btn-icon" src="assets/next-arrow-light.svg" alt=""></a>
               <button class="menu-btn" type="button" data-menu-btn aria-label="Toggle menu">☰</button>
             </div>
           </div>
@@ -79,7 +79,7 @@ function renderFooter() {
         <div class="container">
           <div class="footer-grid">
             <div class="footer-brand">
-              <a class="nav-logo" href="index.html">
+              <a class="nav-logo" href="/">
                 <span class="logo-mark"><img src="assets/icons/sparkles.svg" alt="webfliq logo icon"></span>
                 <span>webfliq</span>
               </a>
