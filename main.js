@@ -1,11 +1,11 @@
 const siteData = {
     nav: [
-        { href: "index.html", label: "Home" },
-        { href: "about.html", label: "About Us" },
-        { href: "team.html", label: "Team" },
-        { href: "projects.html", label: "Projects" },
-        { href: "services.html", label: "Service" },
-        { href: "contact.html", label: "Contact" }
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/team", label: "Team" },
+    { href: "/projects", label: "Projects" },
+    { href: "/services", label: "Service" },
+    { href: "/contact", label: "Contact" }
     ],
     faqs: [
         { q: "Which platform is best for my business website?", a: "Webflow is best for modern marketing websites, WordPress is strong for content-heavy websites, Shopify is ideal for eCommerce, Wix works well for simple business sites, and custom development is best for advanced functionality." },
@@ -16,18 +16,18 @@ const siteData = {
     footer: {
         industries: ["Fintech", "e-Commerce", "Pharma", "Education", "Telecom", "Retail", "Real Estate", "Automotive", "Software/ITES", "Startup"],
         company: [
-            { href: "about.html", label: "About Us" },
-            { href: "projects.html", label: "Case Studies" },
-            { href: "team.html", label: "Team" },
-            { href: "contact.html", label: "Contact" },
-            { href: "terms.html", label: "Terms" }
+            { href: "/about", label: "About Us" },
+            { href: "/projects", label: "Case Studies" },
+            { href: "/team", label: "Team" },
+            { href: "/contact", label: "Contact" },
+            { href: "/terms", label: "Terms" }
         ],
         resources: [
-            { href: "#", label: "Certifications & Awards" },
-            { href: "#", label: "Partners" },
-            { href: "#", label: "Enterprise-Grade Security" },
-            { href: "#", label: "Sustainability" },
-            { href: "privacy.html", label: "Privacy Policy" }
+            { href: "/", label: "Certifications & Awards" },
+            { href: "/", label: "Partners" },
+            { href: "/", label: "Enterprise-Grade Security" },
+            { href: "/", label: "Sustainability" },
+            { href: "/privacy", label: "Privacy Policy" }
         ]
     }
 };
@@ -51,7 +51,7 @@ function renderNavbar() {
       <header class="navbar">
         <div class="container">
           <div class="nav-inner">
-            <a class="nav-logo" href="index.html" aria-label="webfliq home">
+            <a class="nav-logo" href="/" aria-label="webfliq home">
               <span class="logo-mark"><img src="assets/icons/sparkles.svg" alt="webfliq logo icon"></span>
               <span>webfliq</span>
             </a>
