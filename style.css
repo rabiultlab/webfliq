@@ -335,6 +335,10 @@ p {
     animation: shineMove 2.8s linear infinite;
     pointer-events: none
 }
+.data-page-numbers{
+    display: flex;
+    gap: 10px;
+}
 
 @keyframes shineMove {
     to {
@@ -731,6 +735,22 @@ p {
     font-size: 12px;
     font-weight: 900;
     margin-bottom: 14px
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.tag {
+    display: inline-flex;
+    padding: 7px 11px;
+    border-radius: var(--radius-full);
+    background: color-mix(in srgb, var(--cyan) 12%, transparent);
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 900;
 }
 
 .project-link {

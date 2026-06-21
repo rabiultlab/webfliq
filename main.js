@@ -289,7 +289,7 @@ function initFaq() {
         });
     });
 }
-
+/*
 function initProjects() {
     const root = document.querySelector("[data-project-root]");
     if (!root) return;
@@ -337,6 +337,154 @@ function initProjects() {
     prevBtn.addEventListener("click", () => { if (currentPage > 1) { currentPage--; render(); } });
     nextBtn.addEventListener("click", () => { if (currentPage < Math.ceil(filteredCards().length / perPage)) { currentPage++; render(); } });
     render();
+}
+*/
+function initProjects() {
+
+    const root = document.querySelector("[data-project-root]");
+
+    if (!root) return;
+
+    const filterButtons = root.querySelectorAll("[data-filter]");
+    const cards = Array.from(root.querySelectorAll(".project-card"));
+
+    const pagination = root.querySelector("[data-pagination]");
+    const prevBtn = root.querySelector("[data-prev]");
+    const nextBtn = root.querySelector("[data-next]");
+    const pageNumbers = root.querySelector("[data-page-numbers]");
+
+    const perPage = Number(root.dataset.perPage || 8);
+
+    let currentFilter = "All";
+    let currentPage = 1;
+
+    function filteredCards() {
+
+        return cards.filter(card => {
+
+            if (currentFilter === "All") return true;
+
+            const filterTags = card.dataset.filterTags
+                .split(",")
+                .map(tag => tag.trim());
+
+            return filterTags.includes(currentFilter);
+
+        });
+
+    }
+
+    function render() {
+
+        const filtered = filteredCards();
+
+        const totalPages =
+            Math.ceil(filtered.length / perPage) || 1;
+
+        currentPage = Math.min(currentPage, totalPages);
+
+        cards.forEach(card => {
+            card.style.display = "none";
+        });
+
+        filtered
+            .slice(
+                (currentPage - 1) * perPage,
+                currentPage * perPage
+            )
+            .forEach(card => {
+                card.style.display = "block";
+            });
+
+        pagination.classList.toggle(
+            "show",
+            filtered.length > perPage
+        );
+
+        prevBtn.classList.toggle(
+            "disabled",
+            currentPage === 1
+        );
+
+        nextBtn.classList.toggle(
+            "disabled",
+            currentPage === totalPages
+        );
+
+        pageNumbers.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+
+            const btn = document.createElement("button");
+
+            btn.type = "button";
+
+            btn.className =
+                "page-number" +
+                (i === currentPage ? " active" : "");
+
+            btn.textContent = i;
+
+            btn.addEventListener("click", () => {
+                currentPage = i;
+                render();
+            });
+
+            pageNumbers.appendChild(btn);
+
+        }
+
+    }
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            currentFilter = button.dataset.filter;
+
+            currentPage = 1;
+
+            filterButtons.forEach(btn =>
+                btn.classList.remove("active")
+            );
+
+            button.classList.add("active");
+
+            render();
+
+        });
+
+    });
+
+    prevBtn.addEventListener("click", () => {
+
+        if (currentPage > 1) {
+
+            currentPage--;
+
+            render();
+
+        }
+
+    });
+
+    nextBtn.addEventListener("click", () => {
+
+        const totalPages =
+            Math.ceil(filteredCards().length / perPage);
+
+        if (currentPage < totalPages) {
+
+            currentPage++;
+
+            render();
+
+        }
+
+    });
+
+    render();
+
 }
 
 function initForms() {
