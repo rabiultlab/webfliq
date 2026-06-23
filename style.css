@@ -402,10 +402,10 @@ p {
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1.04fr .96fr;
+    display: flex;
+    justify-content: space-between;
     gap: 60px;
-    align-items: center
+    align-items: center;
 }
 
 .hero-actions {
@@ -414,9 +414,12 @@ p {
     flex-wrap: wrap;
     margin-top: 34px
 }
-
+.hero-left{
+    width: 60%;
+}
 .hero-media {
-    position: relative
+    position: relative;
+    width: 40%;
 }
 
 .hero-image-card {
@@ -425,12 +428,33 @@ p {
     border-radius: var(--radius-xl);
     background: var(--surface);
     box-shadow: var(--shadow-glow);
-    transform: rotate(1deg);
-    transition: var(--transition)
+    /*transform: rotate(1deg);
+    transition: var(--transition)*/
+}
+.hero-image-card {
+  width: 100%;
+  height: 400px; /* nijer design onujayi change korte paro */
+  overflow: hidden;
+
+  position: relative;
+}
+
+.hero-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.hero-slider img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-image-card:hover {
-    transform: rotate(0) translateY(-8px)
+    /*transform: rotate(0) translateY(-8px)*/
 }
 
 .hero-image-card img {
@@ -711,11 +735,18 @@ p {
 
 .project-image {
     height: 260px;
-    overflow: hidden
+    overflow: hidden;
+    padding: 15px;
+    background-color: var(--cyan);
 }
 
 .project-image img {
-    transition: transform .6s ease
+    transition: transform .6s ease;
+    height: 230px;
+}
+.project-image-wrap{
+    overflow: hidden;
+    border-radius: var(--radius-md);
 }
 
 .project-card:hover .project-image img {
@@ -734,7 +765,7 @@ p {
     color: var(--cyan);
     font-size: 12px;
     font-weight: 900;
-    margin-bottom: 14px
+    /*margin-bottom: 14px;*/
 }
 .tags {
     display: flex;
@@ -1326,7 +1357,7 @@ select:focus {
     .contact-grid,
     .contact-box,
     .faq-layout {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
     }
 
     .page-hero,
@@ -1363,6 +1394,12 @@ select:focus {
 
     .project-image {
         height: 230px
+    }
+    .project-image-wrap{
+        padding: 10px;
+    }
+    .project-image img{
+        height: 210px;
     }
 
     .team-image {
