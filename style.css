@@ -899,19 +899,28 @@ SMALLER CARD VERSION
 
 .founders-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 360px));
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 20px;
 }
 
 .founders-grid .team-card {
-    max-width: 360px;
+   
     width: 100%;
     margin: 0 auto;
 }
 
-.founders-grid .team-image {
-    height: 250px;
+.founders-grid .founder-profile {
+    height: 350px;
+    
+}
+.founder-profile{
+    margin-bottom: 20px;
+}
+.founder-profile img{
+    object-fit: cover !important;
+    height: auto !important;
+
 }
 
 .founders-grid .team-content {
@@ -953,7 +962,6 @@ SMALLER CARD VERSION
 
 .founder-social:hover {
     transform: translateY(-4px) scale(1.06);
-    border-color: var(--cyan);
     box-shadow: 0 18px 40px rgba(32, 215, 255, .18);
 }
 
@@ -962,6 +970,9 @@ SMALLER CARD VERSION
     margin-top: 4px;
     padding: 12px 18px;
     font-size: 15px;
+}
+.founder-btn-wrap{
+    padding: 0px 20px 20px 20px;
 }
 
 /* Tablet */
