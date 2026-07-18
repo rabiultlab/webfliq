@@ -2,7 +2,7 @@
     --container: 1440px;
     --container-padding: 20px;
     --font-heading: "Space Grotesk", Arial, sans-serif;
-    --font-body: "Inter", Arial, sans-serif;
+    --font-body: "Poppins", Arial, sans-serif;
     --fs-h1: clamp(35px, 6.4vw, 75px);
     --fs-h2: clamp(32px, 4.3vw, 58px);
     --fs-h3: 26px;
@@ -78,7 +78,7 @@ body {
     color: var(--text);
     background: var(--bg);
     font-family: var(--font-body);
-    font-size: var(--fs-body)
+    font-size: var(--fs-body);
 }
 
 a {
@@ -127,29 +127,30 @@ h1,
 h2,
 h3,
 .nav-logo,
-.btn,
 .eyebrow {
     font-family: var(--font-heading)
+}
+.btn{
+    font-family: var(--font-body)
 }
 
 h1 {
     font-size: var(--fs-h1);
-    line-height: var(--lh-tight);
-    letter-spacing: -.075em;
-    margin-bottom: 24px
+    line-height: var(--lh-tight); 
+    margin-bottom: 24px;
+    margin-top: 10px;
+    font-weight: 600;
 }
 
 h2 {
     font-size: var(--fs-h2);
     line-height: var(--lh-heading);
-    letter-spacing: -.06em;
     margin: 16px 0 18px
 }
 
 h3 {
     font-size: var(--fs-h3);
     line-height: var(--lh-heading);
-    letter-spacing: -.035em;
     margin-bottom: 12px
 }
 
@@ -222,7 +223,9 @@ p {
     background: linear-gradient(135deg, var(--primary), var(--cyan));
     box-shadow: var(--shadow-glow)
 }
-
+.marquee-card{
+    padding: 0 10px;
+}
 .logo-mark img,
 .icon-img img,
 .footer-social img,
@@ -230,8 +233,13 @@ p {
 .info-icon img,
 .marquee-card img {
     width: 22px;
-    height: 22px;
+    max-height: 22px;
     object-fit: contain
+}
+.marquee-card img {
+    width: 100%;
+    max-height: 30px;
+    object-fit: contain;
 }
 
 .nav-links {
@@ -536,13 +544,13 @@ p {
 
 .marquee-card {
     width: 230px;
-    min-height: 88px;
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-md);
     background: var(--surface);
     color: var(--muted);
     font-weight: 900;
@@ -876,12 +884,14 @@ p {
 }
 
 .team-image {
-    height: 300px;
-    overflow: hidden
+    height: 250px;
+    overflow: hidden;
 }
 
 .team-image img {
-    transition: transform .6s ease
+    transition: transform .6s ease;
+    object-position: center top;
+    display: block;
 }
 
 .team-card:hover .team-image img {
@@ -995,6 +1005,10 @@ SMALLER CARD VERSION
     .founder-socials {
         justify-content: flex-start;
     }
+    .about-image,
+.contact-panel {
+    min-height: auto !important;
+}
 }
 
 /* Mobile portrait */
@@ -1005,7 +1019,7 @@ SMALLER CARD VERSION
     }
 
     .founders-grid .team-image {
-        height: 220px;
+        height: 300px;
     }
 
     .founders-grid .team-content {
@@ -1024,10 +1038,7 @@ SMALLER CARD VERSION
         border-radius: 12px;
     }
 
-    .founder-social img {
-        width: 17px;
-        height: 17px;
-    }
+    
 
     .founder-btn {
         padding: 11px 16px;
@@ -1370,6 +1381,20 @@ select:focus {
     .faq-layout {
         grid-template-columns: 1fr;
     }
+    .hero-grid{
+        flex-direction: column !important;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .hero-left{
+        width: 100%;
+    }
+    .hero-media{
+        width: 100%;
+    }
+    .hero-image-card{
+        height: 350px;
+    }
 
     .page-hero,
     .home-hero {
@@ -1422,8 +1447,9 @@ select:focus {
     :root {
         --container-padding: 16px;
         --section-padding-md: 66px;
-        --fs-h1: clamp(38px, 12vw, 58px);
-        --fs-h2: clamp(30px, 9vw, 46px)
+        --fs-h1: clamp(30px, 10vw, 50px);
+        --fs-h2: clamp(25px, 7vw, 40px);
+        --fs-h3: 20px;
     }
     .nav-logo img{
         max-height: 30px;
@@ -1474,6 +1500,12 @@ select:focus {
     .footer {
         padding-top: 50px
     }
+    .marquee-card{
+        min-height: 50px;
+    }
+    .marquee-card img {
+        max-height: 20px;
+    }
 }
 /* Theme-based icon switching */
 .theme-icon-light { display: none; }
@@ -1485,4 +1517,283 @@ html[data-theme="dark"] .theme-icon-light { display: none; }
 
 .hidden-field {
     display: none;
+}
+
+
+
+
+/* Course page only — the main site stylesheet handles typography, buttons,
+   containers, cards, sections, colors and responsive foundations. */
+
+.course-hero-title span,
+.section-header h2 span {
+    background: linear-gradient(135deg, var(--text), var(--cyan), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.course-hero-meta {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.course-schedule-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.course-class-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;  
+}
+.course-schedule-card-top,
+.course-schedule-footer,
+.course-class-item,
+.course-module-assignment {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.course-schedule-type,
+.course-module-heading {
+    flex: 1;
+    min-width: 0;
+}
+
+.course-schedule-time {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.course-schedule-time > div,
+.course-class-item {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+}
+
+.course-schedule-details {
+    display: grid;
+    gap: 10px;
+}
+
+.course-schedule-details > div {
+    display: flex;
+    gap: 8px;
+    color: var(--muted);
+}
+
+.course-schedule-footer {
+    justify-content: space-between;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.course-curriculum-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.course-curriculum-summary span,
+.course-module-meta span {
+    padding: 7px 11px;
+    border-radius: var(--radius-full);
+    color: var(--cyan);
+    background: color-mix(in srgb, var(--cyan) 10%, transparent);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Independent course accordion — does not use FAQ accordion classes. */
+.course-accordion {
+    display: grid;
+    gap: 12px;
+}
+
+.course-module {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    box-shadow: var(--shadow-card);
+}
+
+.course-module-trigger {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 18px 20px;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.course-module-trigger:hover {
+    background: color-mix(in srgb, var(--cyan) 5%, transparent);
+}
+
+.course-module-number,
+.course-class-number,
+.course-assignment-icon {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    color: var(--cyan);
+    background: color-mix(in srgb, var(--primary) 20%, transparent);
+    font-weight: 900;
+}
+
+.course-module-heading h3 {
+    margin: 0;
+    font-size: clamp(16px, 2vw, 21px);
+}
+
+.course-module-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 7px;
+}
+
+.course-module-meta span {
+    padding: 0;
+    color: var(--muted);
+    background: transparent;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.course-arrow {
+    flex: 0 0 auto;
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--cyan);
+    transition: transform var(--transition), background var(--transition);
+}
+
+.course-arrow svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.course-module.active .course-arrow {
+    transform: rotate(180deg);
+    background: color-mix(in srgb, var(--cyan) 10%, transparent);
+}
+
+.course-module-content {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height .38s ease, visibility 0s linear .38s;
+}
+
+.course-module.active .course-module-content {
+    visibility: visible;
+    transition: max-height .38s ease, visibility 0s linear 0s;
+}
+
+.course-module-content-inner {
+    padding: 0 20px 20px;
+    border-top: 1px solid var(--border);
+}
+
+.course-module-body {
+    padding-top: 20px;
+}
+
+.course-class-item {
+    align-items: flex-start;
+}
+
+.course-class-item h4 {
+    margin: 0 0 6px;
+}
+
+.course-class-item p,
+.course-module-assignment p {
+    margin-bottom: 0;
+}
+
+.course-module-assignment {
+    align-items: flex-start;
+    margin-top: 16px;
+    padding: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.course-instructor-roles,
+.course-instructor-skills {
+    margin-top: 18px;
+}
+
+.course-enrollment-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+@media (max-width: 880px) {
+    .course-schedule-grid,
+    .course-class-list,
+    .course-schedule-time {
+        grid-template-columns: 1fr;
+    }
+
+    .course-enrollment-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 560px) {
+    .course-hero-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .course-module-trigger {
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .course-module-number {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        font-size: 12px;
+    }
+
+    .course-arrow {
+        width: 34px;
+        height: 34px;
+    }
+
+    .course-module-content-inner {
+        padding: 0 14px 14px;
+    }
 }

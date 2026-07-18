@@ -16,17 +16,15 @@ const siteData = {
     footer: {
         industries: ["Fintech", "e-Commerce", "Pharma", "Education", "Telecom", "Retail", "Real Estate", "Automotive", "Software/ITES", "Startup"],
         company: [
-            { href: "/about", label: "About Us" },
-            { href: "/projects", label: "Case Studies" },
+            { href: "/about", label: "About Us"},
+            { href: "/projects", label: "Case Studies"},
             { href: "/team", label: "Team" },
-            { href: "/contact", label: "Contact" },
-            { href: "/terms", label: "Terms" }
+            { href: "/contact", label: "Contact"},
+            { href: "/terms", label: "Terms"}
         ],
         resources: [
             { href: "/", label: "Certifications & Awards" },
             { href: "/", label: "Partners" },
-            { href: "/", label: "Enterprise-Grade Security" },
-            { href: "/", label: "Sustainability" },
             { href: "/privacy", label: "Privacy Policy"}
         ]
     }
@@ -111,9 +109,9 @@ function renderFooter() {
             </a>
               <p>Premium web agency specializing in modern websites, eCommerce, UI/UX, analytics, and scalable web development for startups and growing brands.</p>
               <div class="footer-socials">
-                <a class="footer-social" href="#"><img src="assets/facebook-light.png" alt="Facebook"></a>
-                <a class="footer-social" href="#"><img src="assets/linkedin-white.png" alt="LinkedIn"></a>
-                <a class="footer-social" href="#"><img src="assets/youtube.png" alt="YouTube"></a>
+                <a class="footer-social" href="https://www.facebook.com/profile.php?id=61592184922399" target="_blank"><img src="assets/facebook-light.png" alt="Facebook"></a>
+                <a class="footer-social" href="https://www.linkedin.com/in/md-rabiul-islam-045a9b422" target="_blank"><img src="assets/linkedin-white.png" alt="LinkedIn"></a>
+                <a class="footer-social" href="https://www.youtube.com/@YasinStack" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
               </div>
             </div>
             <div><div class="footer-title">Industries</div><div class="footer-links">${industries}</div></div>
@@ -544,3 +542,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFaq();
     initProjects();
 });
+
+
+
+
