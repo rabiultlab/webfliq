@@ -4,6 +4,7 @@ const siteData = {
     { href: "/about", label: "About Us" },
     { href: "/team", label: "Team" },
     { href: "/projects", label: "Projects" },
+    { href: "/course", label: "Webflow Course" },
     { href: "/services", label: "Service" },
     { href: "/contact", label: "Contact" }
     ],
@@ -24,13 +25,14 @@ const siteData = {
         ],
         resources: [
             { href: "/", label: "Certifications & Awards" },
+            { href: "/course", label: "Webflow Course" },
             { href: "/", label: "Partners" },
             { href: "/privacy", label: "Privacy Policy"}
         ]
     }
 };
 
-const slider = document.querySelector(".hero-slider");
+/*const slider = document.querySelector(".hero-slider");
 const slides = document.querySelectorAll(".hero-slider img");
 
 let currentIndex = 0;
@@ -56,7 +58,43 @@ function moveSlide() {
   }
 }
 
-setInterval(moveSlide, 3000);
+setInterval(moveSlide, 3000);*/
+const slider = document.querySelector(".hero-slider");
+const slides = document.querySelectorAll(".hero-slider img");
+
+if (slider && slides.length > 0) {
+    let currentIndex = 0;
+    const slideCount = slides.length;
+
+    // First image clone করে শেষে add
+    const firstClone = slides[0].cloneNode(true);
+    slider.appendChild(firstClone);
+
+    function moveSlide() {
+        currentIndex++;
+
+        slider.style.transition =
+            "transform 0.8s ease-in-out";
+
+        slider.style.transform =
+            `translateX(-${currentIndex * 100}%)`;
+
+        if (currentIndex === slideCount) {
+            setTimeout(() => {
+                slider.style.transition = "none";
+                currentIndex = 0;
+                slider.style.transform =
+                    "translateX(0)";
+            }, 800);
+        }
+    }
+
+    setInterval(moveSlide, 3000);
+}
+
+
+
+
 
 function currentPage() {
     const page = window.location.pathname.split("/").pop();
@@ -542,6 +580,51 @@ document.addEventListener("DOMContentLoaded", () => {
     initFaq();
     initProjects();
 });
+
+
+
+
+//Webflow Course js 
+            document.addEventListener("DOMContentLoaded", () => {
+                const courseModules = document.querySelectorAll(
+                    "[data-course-module]"
+                );
+
+                courseModules.forEach((module) => {
+                    const trigger = module.querySelector(
+                        ".course-module-trigger"
+                    );
+
+                    const content = module.querySelector(
+                        ".course-module-content"
+                    );
+
+                    if (!trigger || !content) return;
+
+                    trigger.addEventListener("click", () => {
+                        const isOpen = module.classList.contains(
+                            "active"
+                        );
+
+                        if (isOpen) {
+                            module.classList.remove("active");
+                            trigger.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+                            content.style.maxHeight = "0px";
+                        } else {
+                            module.classList.add("active");
+                            trigger.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+                            content.style.maxHeight =
+                                content.scrollHeight + "px";
+                        }
+                    });
+                });
+            });
 
 
 
